@@ -1,0 +1,14 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .container{background: url('https://www.pixel4k.com/wp-content/uploads/2018/10/glasses-black-close-up-dark-4k_1540575157.jpg') no-repeat   center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 30000px;
+    height: 700px;
+
+}

@@ -1,0 +1,73 @@
+
+  <table class="center1">
+    <tr>
+    
+            <td>
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+                    <label><b>Name Glass</b></label>
+                    <input name="Name" class="form-control" [(ngModel)]="currentProdect.Name"  />
+                <div >
+                    <label><b>Price</b></label>
+                    <input  name="Price" class="form-control" placeholder="Enter Price Glass" value={{currentProdect.Price}}
+                    ngModel required Price #Price="ngModel" [(ngModel)]="currentProdect.Price" />
+                </div>
+                <div >
+                    <label><b>Category</b></label>
+                    <input  name="Category" class="form-control" placeholder="Enter Category of Glass"
+                    ngModel required Category #Category="ngModel"  [(ngModel)]="currentProdect.Category"/>
+                </div>
+                <div >
+                    <label><b>Description</b></label>
+                    <input  name="Description" class="form-control" placeholder="Enter Category of Glass"
+                    ngModel required Description #Description="ngModel" [(ngModel)]="currentProdect.Description"/>
+                </div>
+                <div >
+                    <label><b>ImgUrl</b></label>
+                    <input  name="ImgUrl" class="form-control" placeholder="Enter Category of Glass"
+                    ngModel required ImgUrl #ImgUrl="ngModel" [(ngModel)]="currentProdect.ImgUrl"/>
+                </div>
+                <div >
+                    <label><b>Discount</b></label>
+                    <input  name="Discount" class="form-control" placeholder="Enter Category of Glass"
+                    ngModel required Discount #Discount="ngModel" [(ngModel)]="currentProdect.Discount"/>
+                </div>
+                <div >
+                    <label><b>time</b></label>
+                    <input  name="time" class="form-control" placeholder="old"
+                    ngModel  time #time="ngModel" [(ngModel)]="currentProdect.time"/>
+                </div>
+            
+            <br/>
+            <button  type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+            
+            </form>  
+                  </td>
+           <td>
+    <br><br>
+    <br>
+    <div class="card" style="width: 0rem;">
+        <div class="card-body">
+    <div >
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+        
+              <h5 class="card-title">{{currentProdect.Name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{currentProdect.Category}}</h6>
+              <img class="card-img-top" style="height: 150px ; width: 100;" src={{currentProdect.ImgUrl}} alt="Card image cap">
+              <h6 class="card-subtitle mb-2 text-muted">{{currentProdect.Price}}$</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{currentProdect.Description}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{currentProdect.Discount}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{currentProdect.time}}</h6>
+
+
+            </div>
+          </div>
+       
+    </div>
+    
+    </div>
+    </div>
+    </td>
+    
+    </tr>
+    </table>

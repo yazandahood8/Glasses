@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<h3 class="center">My Cart</h3>
+<ng-container *ngIf="len==0">
+    <p style="font-size: 50px;">You don't hava any product</p>
+    <br><br>    <br><br>
+    <br><br>    <br><br>
+    <br><br>    <br><br>
+    <br><br>    <br><br>
+</ng-container>
+<div class="table-responsive">
+    <ng-container *ngIf="len>0">
+    <table class="table table-bordered">
+            <tr>
+                <th>Item Name</th>
+                <th>Images</th>
+                <th>Price</th>
+                <th>remove</th>
+            </tr>
+            <ng-container *ngFor="let item of items;let i=index">
+                <ng-container *ngIf="item.UserID==UserName">
+
+            <tr>
+                <td>{{item.Name}}</td>
+                <td><img width="250px" height="250px" src={{item.ImgUrl}} class="img-responsive" /><br /></td>
+                <td>{{item.Price}}</td>
+                <td><a (click)="remove(item._id)" class="btn btn-primary" style="color: white;">Remove</a> </td>
+            </tr>
+        </ng-container>
+        </ng-container>
+            <tr>
+                <td colspan="2" >Total</td>
+                <td>
+                <ng-container *ngIf="totalPrice>0">
+                    {{totalPrice}}
+                </ng-container>
+            </td>
+                <td> {{len}} items</td>
+            </tr>
+        </table>
+        <td><a (click)="buy()" class="btn btn-primary" style="color: white;">Buy</a> </td>
+    </ng-container>
+
+
+    </div>
+
+    <app-footer></app-footer>

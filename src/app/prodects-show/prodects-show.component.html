@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="jumbotron">
+   <div class="row">
+    <div class="column">
+    <app-navbar-prodects></app-navbar-prodects>
+     </div>
+    <div class="col-sm" *ngIf="ProductsList?.showComponent">
+    <app-pro [selectedType]="ProductsList?.selectedType"></app-pro>
+    </div>
+   </div>
+   </div>
+   
+
+   
+   <app-footer></app-footer>

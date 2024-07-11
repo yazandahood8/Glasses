@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="center">
+
+<h1>Register</h1>
+</div>
+    <br>
+    <div class="center">
+
+<div class="col-3">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+        <div class="form-group">
+            <label><b style="color: blue;">Username</b></label>
+            <input type="username" name="username" class="form-control" placeholder="Enter Username"
+            ngModel required username #username="ngModel"/>
+            <small *ngIf="!username?.valid && (username?.dirty || username?.touched)"
+            style="color: red;"> Invalid username
+            </small>
+        </div>
+        <div class="form-group">
+            <label><b style="color: blue;">Full Name</b></label>
+            <input type="FullName" name="FullName" class="form-control" placeholder="Enter FullName"
+            ngModel required FullName #FullName="ngModel"/>
+            <small *ngIf="!FullName?.valid && (FullName?.dirty || FullName?.touched)"
+            style="color: red;"> Invalid username
+            </small>
+        </div>
+        <div class="form-group">
+            <label><b style="color: blue;">Password</b></label>
+            <small style="color: blue;">(8 charcters, ^[a-zA-Z]+$)</small>
+            <input type="password" name="password" class="form-control" placeholder="Password"
+            ngModel required minlength="8" #password="ngModel"/>
+        </div>
+        <small *ngIf="!password?.valid && (password?.dirty || password?.touched)"
+        style="color: red;">Invalid password
+    </small>
+    
+    <br/>
+    <button  type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+   
+</div>
+
+
+<router-outlet></router-outlet>
+</div></div>

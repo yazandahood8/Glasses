@@ -1,0 +1,53 @@
+
+<table class="center1">
+<tr>
+    <td>
+    </td>
+        <td>
+            <img src="https://www.pixel4k.com/wp-content/uploads/2018/10/glasses-black-close-up-dark-4k_1540575157.jpg" width="600" height="600">
+        </td>
+       <td>
+<div class="container">
+<br><br>
+<br>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp; Glasses4U</h1>
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+
+
+<div >
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+        <div class="card-subtitle mb-2 text-muted">
+            <label><b>Email address</b></label>
+            <input type="email" name="username" class="form-control" placeholder="Enter email"
+            ngModel required email #username="ngModel"/>
+            <small *ngIf="!username?.valid && (username?.dirty || username?.touched)"
+            style="color: red;"> Invalid email
+            </small>
+        </div>
+        <div >
+            <label><b>Password</b></label>
+            <small>(8 charcters, ^[a-zA-Z]+$)</small>
+            <input type="password" name="password" class="form-control" placeholder="Password"
+            ngModel required minlength="8" #password="ngModel"/>
+        </div>
+        <small *ngIf="!password?.valid && (password?.dirty || password?.touched)"
+        style="color: red;">Invalid password
+    </small>
+    <br/>
+    <button  type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+    <a [routerLink]="['/Register']" class="btn btn-primary">Register</a>
+
+    </form>
+   
+</div>
+
+</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+
+<router-outlet></router-outlet>

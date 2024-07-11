@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="center">
+<h3>Wellcome {{UserName}}</h3>
+</div>
+<h2>Products of the week</h2>
+<br><br>
+<div class="row">
+<div *ngFor="let prodect of prodects">
+    <ng-container *ngIf="prodect.Discount=='yes'">
+        <div class="column">
+            <div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title" style="color:yellowgreen;">{{prodect.Name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{prodect.Category}}</h6>
+      <img class="card-img-top" style="height: 150px ; width: 100;" src={{prodect.ImgUrl}} alt="Card image cap">
+      <h6 class="card-subtitle mb-2 text-muted">{{prodect.Price}}$
+          <div style="color: red;">50% Discount: {{prodect.Price/2}}$</div></h6>
+      <a routerLink="/ProdectsShow/{{u}}/{{prodect._id}}"  class="btn btn-primary">Details</a>
+        </div>
+  </div>
+        </div>
+    </ng-container>
+    
+    </div>
+</div>
+<br>
+<h2>The newest products</h2>
+<br><br>
+<div class="row">
+    <div *ngFor="let prodect of prodects">
+        <ng-container *ngIf="prodect.time=='new'">
+            <div class="column">
+                <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title" style="color:yellowgreen;">{{prodect.Name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{prodect.Category}}</h6>
+          <img class="card-img-top" style="height: 150px ; width: 100;" src={{prodect.ImgUrl}} alt="Card image cap">
+          <h6 class="card-subtitle mb-2 text-muted">{{prodect.Price}}$</h6>
+          <a routerLink="/ProdectsShow/{{u}}/{{prodect._id}}"  class="btn btn-primary">Details</a>
+            </div>
+      </div>
+            </div>
+        </ng-container>
+        
+        </div>
+    </div>
+    <app-footer></app-footer>

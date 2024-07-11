@@ -1,0 +1,11 @@
+<div class="row">
+<div class="column">
+    <img class="img-thumbnail" style="height: 300px;width: 300px;" src={{img}} />
+ </div>
+<div class="list-group">
+    <a (click)="showSunglasses()" class="list-group-item {{showSunglassesActive}} waves-light">{{prodectsList[0].course}}</a>
+    <a (click)="showEyeglasses()" class="list-group-item {{showEyeglassesActive}} waves-light">{{prodectsList[1].course}}</a>
+    <a (click)="showContactLenses()" class="list-group-item {{showContactLensesActive}} waves-light">{{prodectsList[2].course}}</a>
+    <a (click)="opticalAccessories()" class="list-group-item {{showopticalAccessoriesActive}} waves-light">{{prodectsList[3].course}}</a>
+</div>
+</div>

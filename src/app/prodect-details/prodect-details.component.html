@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
+    <h1>{{currentProdect.Name}}</h1>
+    <p class="lead">
+            {{currentProdect.Category}}
+       </p>
+    <p class="lead">
+      {{currentProdect.Description}}  
+    </p>
+    <img src={{currentProdect.ImgUrl}} style="height: 300px; width: 300px;" class="img-fluid z-depth-1" alt="1">
+    <p class="lead">
+       Price:{{currentProdect.Price}}$ 
+      </p>
+</div>
+<app-footer></app-footer>

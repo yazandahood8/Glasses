@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div *ngFor="let prodect of prodects">
+      <div *ngIf="selectedType==prodect.Category">
+        <div class="col-sm">
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+
+      <h5 class="card-title">{{prodect.Name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{prodect.Category}}</h6>
+      <img class="card-img-top" style="height: 150px ; width: 100;" src={{prodect.ImgUrl}} alt="Card image cap">
+      <h6 class="card-subtitle mb-2 text-muted">{{prodect.Price}}$</h6>
+      <a routerLink="/ProdectsShow/{{u}}/{{prodect._id}}"  class="btn btn-primary">Details</a>
+      <a (click)="addCart(prodect)" class="btn btn-primary" style="color: white;">Add to cart</a>
+      <br><br>
+      <div *ngIf="UserName=='admin'">
+        <a routerLink="/ProdectsShow/edit/{{u}}/{{prodect._id}}"  class="btn btn-primary">Edit Product</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+</div>
+
+
+</div>
+<div *ngIf="UserName=='admin'">
+  <a (click)="cc()" class="btn btn-primary" style="color: white;">Add new Product</a>
+
+</div>
+<br>
+

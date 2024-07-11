@@ -1,0 +1,41 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+    <div class="card-subtitle mb-2 text-muted">
+        <label><b>Name Glass</b></label>
+        <input  name="Name" class="form-control" placeholder="Enter Name Glass"
+        ngModel required Name #Name="ngModel"/>
+    </div>
+    <div >
+        <label><b>Price</b></label>
+        <input  name="Price" class="form-control" placeholder="Enter Price Glass"
+        ngModel required Price #Price="ngModel"/>
+    </div>
+    <div >
+        <label><b>Category</b></label>
+        <input  name="Category" class="form-control" placeholder="Enter Category of Glass"
+        ngModel required Category #Category="ngModel"/>
+    </div>
+    <div >
+        <label><b>Description</b></label>
+        <input  name="Description" class="form-control" placeholder="Enter Description of Glass"
+        ngModel required Description #Description="ngModel"/>
+    </div>
+    <div >
+        <label><b>ImgUrl</b></label>
+        <input  name="ImgUrl" class="form-control" placeholder="Enter ImgUrl of Glass"
+        ngModel required ImgUrl #ImgUrl="ngModel"/>
+    </div>
+    <div >
+        <label><b>Discount</b></label>
+        <input  name="Discount" class="form-control" placeholder="Enter Discount of Glass"
+        ngModel required Discount #Discount="ngModel"/>
+    </div>
+    <div >
+        <label><b>time</b></label>
+        <input  name="time" class="form-control" placeholder="Enter time of Glass"
+        ngModel  time #time="ngModel"/>
+    </div>
+
+<br/>
+<button  type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+
+</form>
