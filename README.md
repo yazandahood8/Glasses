@@ -80,6 +80,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Yazan - [LinkedIn](https://www.linkedin.com/in/yazan-dahood-031145309) - yazan.dahood@example.com
+Yazan - [LinkedIn](https://www.linkedin.com/in/yazan-dahood-031145309)
 
-GitHub Repository: [https://github.com/yazandahood8/glasses-web-app](https://github.com/yazandahood8/glasses-web-app)
+GitHub Repository: [https://github.com/yazandahood8/Glasses]
